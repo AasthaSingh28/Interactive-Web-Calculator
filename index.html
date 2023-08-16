@@ -1,0 +1,150 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .text {
+            font-family: cursive;
+            font-size: 1cm;
+            text-align: center;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(to right, rgb(137, 34, 34), rgb(2, 58, 16));
+        }
+
+        .container {
+            width: 100%;
+            max-width: 220px;
+            text-align: center;
+            padding: 15px 15px;
+            cursor: pointer;
+        }
+
+
+        .calci-display,
+        .calci-keys {
+            padding: 10px;
+        }
+
+        .calci-display {
+            background-color: black;
+            color: aliceblue;
+            text-align: right;
+        }
+
+        .calci-keys {
+            background-color: rgb(69, 187, 187);
+            border: 3px solid black;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .btn {
+            background-color: aliceblue;
+            display: inline-block;
+            width: 30px;
+            height: 40px;
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 20%;
+        }
+
+        #brb {
+            display: inline-block;
+            width: 50px;
+            height: 40px;
+            padding: 10px;
+        }
+
+        .area {
+            background-color: rgb(102, 100, 100);
+            width: auto;
+            height: 0.75cm;
+            text-align: end;
+
+        }
+
+
+        @media (max-width: 500px) {
+            .container {
+                padding: 0 5px;
+            }
+
+            .btn {
+                width: 25px;
+                height: 35px;
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 class="text"> Welcome to Calculator</h1>
+    <div class="container">
+        <div class="calci-display">
+            <input type="text" class="area" value="0">
+        </div>
+        <div class="calci-keys">
+            <table>
+                <tr>
+                    <td>
+                       <div class="btn">7</div>
+                       <div class="btn">8</div>
+                       <div class="btn">9</div>
+                       <div class="btn">*</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="btn">4</div>
+                       <div class="btn">5</div>
+                       <div class="btn">6</div>
+                       <div class="btn">/</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="btn">1</div>
+                        <div class="btn">2</div>
+                        <div class="btn">3</div>
+                        <div class="btn">+</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="btn">0</div>
+                        <div class="btn">.</div>
+                        <div class="btn">=</div>
+                        <div class="btn">-</div>
+                      
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div id="brb" class="btn">AC</div>
+                        <div id="brb" class="btn">DEL</div>
+                      
+                     
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="calci.js"></script>
+</body>
+
+</html>
